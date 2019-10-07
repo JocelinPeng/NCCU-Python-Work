@@ -1,6 +1,9 @@
 # coding: utf-8
+get_ipython().run_line_magic('matplotlib', 'inline')
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 from numpy.random import randint
-from numpy.random import choice
 words='''
 我
 我的
@@ -26,11 +29,9 @@ words='''
 靈魂
 停止'''
 phrase=words.split("\n")
-n=randint(3,6)
-
+from numpy.random import choice
 for i in range(n):
     k=randint(5,6)
     egg=choice(phrase,k)
     ham=" ".join(egg)
     print(ham)
-    
